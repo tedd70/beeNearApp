@@ -1,0 +1,14 @@
+<section class="pickup-container">
+  <div class="title-and-info">
+    <h2>You can pick up your luggage here !</h2>
+
+    <div class="info">
+      <span>Price for your first hour: 10 RON.</span>
+      <span>After that you pay only 5 RON per hour !</span>
+    </div>
+  </div>
+
+  <div class="pickup-form">
+    <app-luggage-pickup-form (getaccess)="getAccessCode($event)"></app-luggage-pickup-form>
+  </div>
+</section>

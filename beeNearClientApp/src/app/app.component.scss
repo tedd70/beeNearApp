@@ -1,0 +1,14 @@
+.section-parent {
+  display: flex;
+  height: calc(100vh - 78px);
+  flex-wrap: wrap;
+
+  .navbar {
+    background-color: #1a232b;
+  }
+
+  .router-outlet {
+    flex: 1 0 auto;
+    padding: 16px;
+  }
+}

@@ -1,0 +1,13 @@
+<form class="form" [formGroup]="pickupForm" (ngSubmit)="onSubmit(pickupForm)">
+  <div class="form-content">
+    <input placeholder="Your access code" type="text" formControlName="accessCode" required>
+    <div *ngIf="pickupForm.controls.accessCode.hasError('required') && submitted" class="alert alert-danger">
+      This field is mandatory !  
+    </div>
+    <div *ngIf="pickupForm.controls.accessCode.hasError('minlength')" class="alert alert-danger">
+      The access code should be have 8 or more characters !  
+    </div>
+
+    <button type="submit" class="submitForm">Get access</button>
+  </div>
+</form>

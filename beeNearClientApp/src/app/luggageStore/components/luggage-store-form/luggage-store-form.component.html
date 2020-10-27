@@ -1,0 +1,21 @@
+<form class="form" [formGroup]="storeForm" (ngSubmit)="onSubmit(storeForm)">
+  <div class="form-content">
+    <input placeholder="Your name" type="text" formControlName="userName" required>
+    <div *ngIf="storeForm.controls.userName.hasError('minlength')" class="alert alert-danger">
+      Please write something longer !
+    </div>
+
+    <input placeholder="Number of luggage" type="text" formControlName="numberOfLuggage" required>
+    <div *ngIf="storeForm.controls.numberOfLuggage.hasError('min')" class="alert alert-danger">
+      The number of luggage should be greater than 0 !
+    </div>
+    <div *ngIf="storeForm.controls.numberOfLuggage.hasError('max')" class="alert alert-danger">
+      The number of luggage should be smaller than 10 !
+    </div>
+    <div *ngIf="storeForm.controls.numberOfLuggage.hasError('pattern')" class="alert alert-danger">
+      The number of luggage should contain only numbers !
+    </div>
+
+    <button type="submit" class="submitForm" [disabled]="storeForm.invalid">Add</button>
+  </div>
+</form>

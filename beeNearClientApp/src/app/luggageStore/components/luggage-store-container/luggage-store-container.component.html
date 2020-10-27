@@ -1,0 +1,17 @@
+<section class="store-container">
+  <div class="title-and-info">
+    <h2>Let us to store your luggage...</h2>
+
+    <div class="info">
+      <span>The capacity of our warehouse: {{ totalBoxs }} boxes</span>
+      <span>Now are occupied: {{ indexForBox }}</span>
+    </div>
+  </div>
+  
+  <div class="store-form">
+    <app-luggage-store-form 
+      (add)="addNewLuggage($event)"
+    >
+  </app-luggage-store-form>
+  </div>
+</section>
